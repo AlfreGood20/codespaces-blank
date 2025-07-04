@@ -3,15 +3,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
 import com.spring.spring_prueba.entity.Administrador;
 import com.spring.spring_prueba.service.AdminServicio;
-import org.springframework.web.bind.annotation.RequestParam;
-
 
 @Controller
-@RequestMapping("/administradores")
 public class AdminControlador {
 
     @Autowired
@@ -31,7 +26,7 @@ public class AdminControlador {
 
       @GetMapping("/")
     public String mostrarSaludo(Model model) {
-        model.addAttribute("Saludo", "hola mundo");
-        return "index";
+        model.addAttribute("saludo", "HOLA MUNDO DESDE JAVA jiji");
+        return "administrador";
     }
 }
